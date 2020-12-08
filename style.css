@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body{
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+  --z-fixed: 100;
+}
+
+#background{
+  /*for background image properties*/
+  position: fixed;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .4;
+}
+html{
+  scroll-behavior: smooth;
+}
+#user, #signIN, #signUP{
+  display: none;
+}
+
+span{
+  color: rgb(72, 118, 152);
+  cursor: pointer;
+  text-shadow: .5px .5px #757575a6;
+}
+
+#user{
+  color: black;
+}
+#signOUT{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.top{
+  top: 0;
+  height: 1px;
+  width: 100%;
+  background-color: hsla(0, 96%, 47%, 0);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(72, 118, 152);
+  position: fixed;
+  top: 0; 
+  width: 100%;
+  z-index: 9999;
+  cursor: pointer;
+}
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 21px 0px;
+  text-decoration: none;
+  margin-right: 50px;
+  
+}
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.logo{
+  float: left;
+  font-weight: bold;
+  color: white;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.sUP, .sIN {
+  width: 30%;
+  margin: 0px auto;
+  padding: 20px;
+
+}
+
+.sUP input, .sIN input {
+  display: block;
+  border: 1.5px solid rgb(72, 118, 152);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.24);
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sUP button, .sIN button {
+  background: rgb(119, 167, 213);
+  color: #fff;
+  border: 1px solid rgb(72, 118, 152);
+  border-radius: 10px;
+  padding: 15px;
+  display: block;
+  width: 108%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.input button, #signOUT button{
+  background: rgb(119, 167, 213);
+  color: #fff;
+  border: 1px solid rgb(72, 118, 152);
+  font-size: 15px;
+  padding: 9px;
+  border-radius: 10px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+#signOUT button{
+  float: right;
+  margin-top: 0;
+  margin-right: 15px;
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.sUP button:hover, .sIN button:hover, .input button:hover, #signOUT button:hover {
+  background: rgba(255, 255, 255, 0);
+  color: rgb(72, 118, 152);
+  border: 1px solid rgb(72, 118, 152);
+  cursor: pointer;
+}
+
+.widget{
+  width: 699px;
+  margin: 50px auto;
+}
+
+.input{
+  position: relative;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.input input[type="text"]{
+  width:65%;
+  height: 20px;
+  font-size: 15px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.178);
+  border-radius: 10px;
+  border: 1.5px solid rgb(72, 118, 152);
+  bottom: 0;
+  font-family: 'Poppins', sans-serif; 
+}
+#askSignup{
+  margin-top: 15px;
+  text-align: center;
+}
+#user{
+  font-size: 12px;
+}
+
+/*Card properties*/
+.card{
+  top: 0;
+  position: relative;
+  width: 50%;
+  margin: 0px auto;
+  color: rgb(14, 49, 71);
+  /*text-shadow: .5px .5px #757575;*/
+}
+
+.card .logo{
+  margin: 0px auto;
+  color: black;
+}
+
+.card .ask{
+  font-size: 15px;
+  font-weight: bold;
+}
+.card .name{
+  font-size: 25px;
+  font-weight: bold;
+  color: rgba(14, 49, 71, 0.89);
+}
+.card .temp{
+  font-size: 65px;
+  font-weight: bold;
+  color: rgba(14, 49, 71, 0.678);
+  text-shadow: .5px .5px #757575;
+}
+.card .date{
+  font-size: 15px;
+  margin: 0;
+  color: rgba(14, 49, 71, 0.89);
+}
+.card .desc{
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: rgba(14, 49, 71, 0.678);
+  text-shadow: .5px .5px #757575;
+}
+
+.card p{
+  text-align: center;
+  margin:10px 0;
+  font-size:20px;
+}
+
+.card .icon{
+  margin: 0px auto;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 100px;
+  display: none;
+}
+
+.widget{
+  height: 650px;
+}
+
+#wdgt{
+  position: relative;
+  top: 250px;
+}
+
+#map{
+  width:699px; height:500px; margin: 50px auto;
+}
+
+/*for mobile and tablet*/
+@media screen and (max-width:768px){
+  .navbar{
+    display: none;
+  }
+  .logo{
+    display: none;
+  }
+  .card .icon{
+    display: block;
+  }
+  .card{
+    width: 100%;
+    margin: 0px auto;
+  }
+  .sUP, .sIN {
+  width: 40%;
+  margin: 0px auto;
+  }
+  .widget{
+  width: 90%;
+  margin: 0px auto;
+  }
+  #map{
+    top: 150px;
+  width:90%; height:500px; margin: 5px auto;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Weather App</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
+	</script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js">
+	</script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js">
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js">
+	</script>
+</head>
+
+<body>
+<!-----Background image----->
+  <img id="background" src="img.jpg">
+<!---------->
+
+<!-----Navigation bar----->
+  <div class="navbar">
+    <a onclick="navMap()">Map</a>
+    <a onclick="navWdgt()">Widget</a>
+    <a href="#hm">Home</a>
+    <p class="logo" >Weather App</p>
+  </div>
+<!---------->
+  <div class="top" id="hm">
+    <p class="logo">Weather App</p>
+  </div>
+
+<!-----Main page----->
+  <div class="basic">
+    <div class="card" >
+    <div class="input"> 
+		<input type="text" placeholder="Enter your city" class="input_text">
+    <button onclick="mainfunc()" id="signIn">Search</button>
+    </div>
+      <p class="name" id="name"></p>
+      <p class="date"></p>
+      <p class="temp"></p>
+      <p class="desc"></p>
+      <p class="feels"></p>
+      <p class="hum"></p>
+      <p class="prs"></p>
+      <p class="tmpMin"></p>
+      <p class="tmpMax"></p>
+      <p class="rise"></p>
+      <p class="set"></p>
+      <p class="account"><span id="user"></span>
+      <span id="signOUT" onclick="signOut()">Log out</span></p></p>
+      <p id="askLogin" class="ask">To use full features, <span onclick="openLogin() ">Login</span> now!</p>
+      <p class="icon">Weather App</p>
+    </div>
+    </div>
+<!-----End of main page----->
+
+<!-----Sign Up block----->
+    <div id="signUP" class="sUP">
+      <input type="email" placeholder="Email" id="emails"/>
+      <input type="password" placeholder="Password" id="passwords"/>
+      <button onclick="signUp()" id="signUp"> Sign Up </button>
+      <script src="auth.js"></script>
+    </div>
+<!-----End of signup block----->
+
+<!-----Sign In block----->
+    <div id="signIN" class="sIN">
+      <input type="email" placeholder="Email" id="email"/>
+      <input type="password" placeholder="Password" id="password"/>
+      <button onclick="signIn()" id="signIn"> Login </button>
+      <p id="askSignup">New here? <span onclick="openSignup()">Sign up</span> now! It's free!</p>
+      <script src="auth.js"></script>
+    </div>
+<!-----End of signin block----->
+
+<!-----Signout button, now hidden. Replaced by span----->
+  <div id="signOUT">
+    <button onclick="signOut()" id="signOut"> Sign Out </button>
+    <script src="auth.js"></script>
+  </div>
+<!-----End of signout block----->
+
+<!-----Widget page----->
+  <div class="widget" id="wgt">
+    <div id="wdgt">
+      <a class="weatherwidget-io" href="https://forecast7.com/en/23d8190d41/dhaka/" data-label_1="Weekly weather forecast" data-label_2="of your current location" data-font="Open Sans" data-icons="Climacons Animated" data-theme="pure" data-basecolor="rgba(255, 255, 255, 0.13)" data-accent="rgba(14, 49, 71, 0.07)" ></a>
+      <script src="widget.js"></script>
+    </div>
+  </div>
+<!-----End of widget----->
+
+<!-----Map----->
+  <div id="map">
+  <script src="map.js"></script>
+  </div>
+<!-----End of map----->
+
+<script src="script.js"></script>
+</body>
+</html>
